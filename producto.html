@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a> <!--bloque -  elemento - modificador-->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="cuenta.html">Cuenta</a>
+    </nav>
+    
+    <main class="contenedor">
+        <h1 id="nombreProducto">React JS</h1>
+        <p class="precio" id="precioProducto">$25000</p>
+
+        <div class="camisa">
+            <img class="camisa__imagen" id="imagenProducto" src="img/3.jpg" alt="imagen del producto">
+
+            <div class="camisa__contenido">
+                <p>Aliquam pharetra urna ut lacus porttitor, nec dapibus justo pretium. Aliquam vehicula massa vitae fermentum ultricies. Praesent hendrerit faucibus tellus, in fermentum nisi viverra vel. </p>
+
+                <form class="formulario">
+                    <select class="formulario__campo" id="formProducto">
+                        <option disabled selected>-- Seleccionar talla --</option>
+                        <option>Talla S</option>
+                        <option>Talla M</option>
+                        <option>Talla L</option>
+                        <option>Talla XL</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!--Carrito compras-->
+    <button class="carrito-flotante" id="btnCarrito">
+        <span class="carrito-contador" id="contadorCarrito">0</span>
+        <svg class="svg-icon" viewBox="0 0 20 20">
+        <path fill="white" d="M17.671,13.945l0.003,0.002l1.708-7.687l-0.008-0.002c0.008-0.033,0.021-0.065,0.021-0.102c0-0.236-0.191-0.428-0.427-0.428H5.276L4.67,3.472L4.665,3.473c-0.053-0.175-0.21-0.306-0.403-0.306H1.032c-0.236,0-0.427,0.191-0.427,0.427c0,0.236,0.191,0.428,0.427,0.428h2.902l2.667,9.945c0.037,0.119,0.125,0.217,0.239,0.268c-0.16,0.26-0.257,0.562-0.257,0.891c0,0.943,0.765,1.707,1.708,1.707S10,16.068,10,15.125c0-0.312-0.09-0.602-0.237-0.855h4.744c-0.146,0.254-0.237,0.543-0.237,0.855c0,0.943,0.766,1.707,1.708,1.707c0.944,0,1.709-0.764,1.709-1.707c0-0.328-0.097-0.631-0.257-0.891C17.55,14.182,17.639,14.074,17.671,13.945"/>
+    </svg>
+    </button>
+
+    <div id="carritoLateral" class="carrito-lateral">
+    <h2>Tu Carrito</h2>
+    <div id="listaCarrito"></div>
+    <div class="carrito-footer">
+        <h3>Total: $<span id="totalCarrito">0</span></h3>
+        <button class="btnComprar" id="btnComprar">Realizar compra</button>
+    </div>
+    </div>
+
+    <!-- Botón flotante de ayuda -->
+    <a href="https://wa.me/573001234567" class="btn-ayuda-flotante" target="_blank" rel="noopener" title="Contactar ayuda">
+        <svg class="btn-ayuda-flotante__icono" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="btn-ayuda-flotante__texto">Ayuda</span>
+    </a>
+
+    <footer class="footer">
+        <a class="footer__texto"> Front End Store -  Todos los derechos reservados 2026</a>
+    </footer>
+
+</body>
+    <script src="js/producto.js"></script>
+    <script src="js/carrito.js"></script>
+</html>
