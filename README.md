@@ -1,6 +1,6 @@
 Hola soy Juan José 👋
 
-Estudiante de Ingeniería de Software (5to semestre)
+Estudiante de Ingeniería de Software
 
 Habilidades:
 
