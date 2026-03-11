@@ -36,16 +36,23 @@
                     </form>
 
                     <h2>Registro</h2>
-                    <form class="formulario formulario--registro" id="formRegister">
-                        <input class="formulario__campo" type="text" id="regNombre" placeholder="Nombre completo" autocomplete="name" required>
-                        <input class="formulario__campo" type="text" id="regUser" placeholder="Usuario" autocomplete="username" required>
-                        <input class="formulario__campo" type="password" id="regPass" placeholder="Contraseña" autocomplete="new-password" required>
-                        <input class="formulario__campo" type="email" id="regCorreo" placeholder="Correo electrónico" autocomplete="email" required>
-                        <input class="formulario__campo" type="text" id="regDocumento" placeholder="Documento de identidad">
-                        <input class="formulario__campo" type="tel" id="regTelefono" placeholder="Teléfono" autocomplete="tel">
-                        <input class="formulario__campo" type="text" id="regDireccion" placeholder="Dirección" autocomplete="street-address">
-                        <input class="formulario__submit" type="submit" value="Crear cuenta">
-                    </form>
+
+                    <input 
+                        class="formulario__submit" 
+                        type="button" 
+                        id="btnMostrarRegistro" 
+                        value="Registrarse">
+
+                        <form class="formulario formulario--registro" id="formRegister" style="display: none;">
+                            <input class="formulario__campo" type="text" id="regNombre" placeholder="Nombre completo" autocomplete="name" required>
+                            <input class="formulario__campo" type="text" id="regUser" placeholder="Usuario" autocomplete="username" required>
+                            <input class="formulario__campo" type="password" id="regPass" placeholder="Contraseña" autocomplete="new-password" required>
+                            <input class="formulario__campo" type="email" id="regCorreo" placeholder="Correo electrónico" autocomplete="email" required>
+                            <input class="formulario__campo" type="text" id="regDocumento" placeholder="Documento de identidad">
+                            <input class="formulario__campo" type="tel" id="regTelefono" placeholder="Teléfono" autocomplete="tel">
+                            <input class="formulario__campo" type="text" id="regDireccion" placeholder="Dirección" autocomplete="street-address">
+                            <input class="formulario__submit" type="submit" value="Crear cuenta">
+                        </form>
                     <p id="estadoCuenta"></p>
                 </section>
             </div>

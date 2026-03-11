@@ -500,3 +500,7 @@ h3 {
 .btn-delete:hover {
     transform: scale(1.2);
 }
+
+#btnMostrarRegistro{
+    width:100%;
+}

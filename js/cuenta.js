@@ -208,14 +208,17 @@ document.addEventListener("DOMContentLoaded", () => {
           body: { username, password, nombre, correo, documento, telefono, direccion },
           auth: false,
         });
-        setEstado("Cuenta creada. Ahora inicia sesión.");
-      } catch (err) {
-        setEstado(err.message);
-      }
+        formRegister.style.display = "none";
+
+        const btnMostrarRegistro = document.getElementById("btnMostrarRegistro");
+        if (btnMostrarRegistro) btnMostrarRegistro.style.display = "block";
+
+        } catch (err) {
+          setEstado(err.message);
+}
     });
   }
-
-  const avatarInput = document.getElementById("avatarInput");
+  const avatarInput = document.getElementById("avatarInput");   
   const btnGuardarFoto = document.getElementById("btnGuardarFoto");
 
   if (avatarInput) {
@@ -268,6 +271,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  
+
   refrescarUI();
 });
+const btnMostrarRegistro = document.getElementById("btnMostrarRegistro");
 
+if (btnMostrarRegistro && formRegister) {
+  btnMostrarRegistro.addEventListener("click", () => {
+    formRegister.style.display = "block";
+    btnMostrarRegistro.style.display = "none";
+  });
+}
